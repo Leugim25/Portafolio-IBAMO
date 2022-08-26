@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    --azul: #00eeff;
+    --gris: #363537;
+    --negro: #22211f;
+    --blanco: #FFFFFF;
+}
+
+body{
+    background: var(--negro);
+}
+
+header{
+    display: flex;
+    min-height: 8%;
+    padding: 0.5em;
+    background-color: var(--gris);
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+}
+
+.logo{
+    display: flex;
+    font-weight: 600;
+    text-decoration: none;
+    align-items: center;
+    color: var(--blanco);
+}
+
+.logo img{
+    height: 2em;
+    margin-left: 1.5em;
+    margin-right: 0.5em;
+}
+
+.nav-link{
+    color: var(--blanco);
+    max-height: 2%;
+    font-weight: 100;
+    padding: 0.9em;
+    margin-right: 1.5em;    
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: var(--azul);
+    border-bottom: 2px var(--azul) solid;
+}
+
+.introduction{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.introduction .text{
+    float: left;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-top: 20%;
+    margin-left: 8%;
+}
+
+.introduction .text span{
+    position: absolute;
+    margin-left: -320px;
+    height: 0;
+    border-left: 2px var(--azul) solid;
+    animation: saltar 5s infinite;
+    transform: translateY(0);
+    text-align: left;
+}
+
+.introduction .text .content-text h1{
+    color: var(--blanco);
+    width: 100%;
+    font-size: 3em;
+    text-align: left;
+}
+
+.introduction .text .content-text p{
+    color: var(--blanco);
+    font-size: 25px;
+    font-weight: 100;
+    text-align: left;
+}
+
+.introduction .image{
+    float: right;
+    margin: auto;
+    text-align: center;
+}
+
+@keyframes saltar {
+    0%{
+        height: 20px;
+    }
+    40%{
+        transform: translateY(120px);
+        height: 0;
+    }
+    50%{
+        transform: translateY(60px);
+        height: 60px;
+    }
+    100%{
+        transform: translateY(0);
+        height: 120px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    header{
+        flex-direction: column;
+    }
+}
