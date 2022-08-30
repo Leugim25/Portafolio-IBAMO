@@ -9,21 +9,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/2012ffdce8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <a class="logo" href="">
-            <img src="../assets/img/logo.png" alt="">
-            <h2>Awesoft</h2>
-        </a>
         <nav>
-            <a class="nav-link" href="">Inicio</a>
-            <a class="nav-link" href="">Proyectos</a>
-            <a class="nav-link" href="">Habilidades</a>
-            <a class="nav-link" href="">Contacto</a>
+            <a class="logo" href="">
+                <img src="../assets/img/logo.png" alt="">
+                <h2>Awesoft</h2>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="menu-check">
+                <i class="fa-light fa-bars"></i>
+            </label>
+            <ul class="nav-link">
+                <li><a class="active" href="#introduction">Inicio</a></li>
+                <li><a href="#">Habilidades</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
     </header>
-    <section>
+    <section id="introduction">
         <div class="introduction">
             <div class="text">
                 <span></span>
@@ -37,6 +49,9 @@
                 <img src="../assets/img/Programming-bro.png" alt="Desarrollador RPA" width="600em" height="600em">
             </div>
         </div>
+    </section>
+    <section>
+
     </section>
 </body>
 </html>

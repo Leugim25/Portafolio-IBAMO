@@ -14,13 +14,65 @@ body{
 }
 
 header{
-    display: flex;
-    min-height: 8%;
+    max-height: 5%;
     padding: 0.5em;
     background-color: var(--gris);
-    justify-content: space-between;
-    align-items: center;
     font-size: 25px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-link{
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: 100px;
+    background: rgba(26, 24, 24, 0.69);
+    box-shadow: 0 4px 30px rgba(26, 24, 24, 0.69);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-link li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-link li a{
+    color: var(--blanco);
+    text-decoration: none
+}
+
+.nav-link a.active, .nav-link li a:hover{
+    color: var(--azul);
+    transition: .3s;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .nav-link{
+    height: 100vh;
+}
+
+#check:checked ~ .nav-link li {
+    display: block;
+}
+
+.menu-check{
+    font-size: 25px;
+    color: var(--blanco);
+    margin-left: 30%;
+    cursor: pointer;
 }
 
 .logo{
@@ -37,31 +89,16 @@ header{
     margin-right: 0.5em;
 }
 
-.nav-link{
-    color: var(--blanco);
-    max-height: 2%;
-    font-weight: 100;
-    padding: 0.9em;
-    margin-right: 1.5em;    
-    text-decoration: none;
-}
-
-.nav-link:hover{
-    color: var(--azul);
-    border-bottom: 2px var(--azul) solid;
-}
-
 .introduction{
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .introduction .text{
     float: left;
     text-align: center;
-    position: relative;
     margin: auto;
     margin-top: 20%;
     margin-left: 8%;
@@ -115,8 +152,29 @@ header{
     }
 }
 
-@media screen and (min-width:768px) and (max-width:1023px){
-    header{
-        flex-direction: column;
+@media screen and (min-width:900px){
+    .nav-link{
+        font-size: small;
+    }
+
+    .menu-check{
+        display: none;
+    }
+
+    .nav-link{
+        position: relative;
+        top: 0;
+        text-align: right;
+        background-color: var(--gris);
+        transition: none;
+    }
+
+    .nav-link li{
+        display: inline-block;
+        line-height: 0;
+        margin: 0 4%;
+        font-size: 25px;
+        transition: none;
+        align-items: center;
     }
 }
