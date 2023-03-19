@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Awesoft</title>
+    <title>Portafolio - Tocsoft</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,35 +15,36 @@
             scroll-behavior: smooth;
         }
     </style>
-    <script src="https://kit.fontawesome.com/2012ffdce8.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <a class="logo" href="">
                 <img src="../assets/img/logo.png" alt="">
-                <h2>Awesoft</h2>
             </a>
             <input type="checkbox" id="check">
             <label for="check" class="menu-check">
-                <i class="fa-light fa-bars"></i>
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
             </label>
             <ul class="nav-link">
-                <li><a class="active" href="#introduction">Inicio</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#skills">Servicios</a></li>
+                <li><a href="#proyects">Proyectos</a></li>
+                <li><a href="#Contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <section id="introduction">
+    <section id="home">
         <div class="introduction">
             <div class="text">
                 <span></span>
                 <div class="content-text">
                     <p>Hola, mi nombre es</p>
                     <h1>Miguel Ibañez Moreno</h1>
-                    <p>Soy Desarrollador Trainee RPA apasionado a las tecnologias</p>
+                    <p>Desarrollador Web - Desarrollador Trainee RPA</p>
                 </div>
             </div>
             <div class="image">
@@ -50,8 +52,155 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="section" id="skills">
+        <div class="title">
+            <h1>Servicios</h1>
+            <ul class="services">
+                <li>Desarrollo de software</li>
+                    <p>
+                        Se oferta una variedad de servicios de desarrollo de software, desde la creación de una aplicación web hasta la creación de un
+                        sistema de gestión de bases de datos. Se realiza un trabajo bien ejecutado para garantizar que el software creado sea de la más
+                        alta calidad y se adapte a las necesidades específicas de nuestros clientes. Nuestros servicios de desarrollo de software 
+                        incluyen la creación de aplicaciones web, la creación de sistemas de bases de datos, sistemas de inventarios, aplicativos de
+                        escritorio, mantenimiento de aplicaciones existentes y la optimización de los sistemas de software existentes.
 
+                        Ofrecemos diversos desarrollos dependiendo de la necesidad del cliente con las mejores tecnologias del mercado como lo son:
+                    </p>
+                    <div class="skills">
+                        <div class="html hability">
+                            <img src="../assets/img/html-5.png" alt="Html-5" width="100em" height="100em">
+                            <span class="material-symbols-outlined">
+                                html
+                            </span>
+                            <div class="barra">
+                                <div class="progreso" style="--w:100%"></div>
+                            </div>
+                        </div>
+                        <div class="css hability">
+                            <img src="../assets/img/css-3.png" alt="css-3" width="100em" height="100em" id="img">
+                            <span class="material-symbols-outlined">
+                                css
+                            </span>
+                            <div class="barra" id="barra">
+                                <div class="progreso" style="--w:100%"></div>
+                            </div>
+                        </div>
+                        <div class="js hability">
+                            <img src="../assets/img/js.png" alt="js" width="100em" height="100em">
+                            <span class="material-symbols-outlined">
+                                javascript
+                            </span>
+                            <div class="barra">
+                                <div class="progreso" style="--w:75%"></div>
+                            </div>
+                        </div>
+                        <div class="java hability">
+                            <img src="../assets/img/Java.png" alt="java" width="100em" height="100em">
+                            <span class="material-symbols-outlined">
+                                Java
+                            </span>
+                            <div class="barra">
+                                <div class="progreso" style="--w:45%"></div>
+                            </div>
+                        </div>
+                        <div class="spring hability">
+                            <img src="../assets/img/spring.png" alt="spring" width="100em" height="100em">
+                            <span class="material-symbols-outlined">
+                                Spring
+                            </span>
+                            <div class="barra">
+                                <div class="progreso" style="--w:25%"></div>
+                            </div>
+                        </div>
+                        <div class="laravel hability">
+                            <img src="../assets/img/Laravel.png" alt="ñaravel" width="100em" height="100em">
+                            <span class="material-symbols-outlined">
+                                Laravel
+                            </span>
+                            <div class="barra">
+                                <div class="progreso" style="--w:55%"></div>
+                            </div>
+                        </div>
+                    </div> 
+                <li>Automatización RPA</li>
+                <p>
+                    Nuestros servicios de automatización RPA le permiten a nuestros clientes aprovechar la tecnología para automatizar procesos
+                    manuales y repetitivos. Se realiza un desarrollo con buenas practicas para asegurar que los procesos sean eficientes
+                    y seguros. Nuestros servicios de automatización RPA incluyen la creación de scripts para automatizar procesos, la creación 
+                    de bots para realizar tareas, la gestión de bots, la prueba de bots y la integración de bots con sistemas de software
+                    existentes.
+                    
+                    El desarrollo de las automatizaciones con RPA se realizan con tecnologias como lo son:
+                </p>
+                <div class="skills" id="skills">
+                    <div class="vba hability">
+                        <img src="../assets/img/vb.net.png" alt="java" width="100em" height="100em">
+                        <span class="material-symbols-outlined">
+                            VBS
+                        </span>
+                        <div class="barra">
+                            <div class="progreso" style="--w:20%"></div>
+                        </div>
+                    </div>
+                    <div class="uipath hability">
+                        <img src="../assets/img/uipath.png" alt="js" width="100em" height="100em">
+                        <span class="material-symbols-outlined">
+                            Uipath
+                        </span>
+                        <div class="barra">
+                            <div class="progreso" style="--w:75%"></div>
+                        </div>
+                    </div>
+                    <div class="powerAutomate hability">
+                        <img src="../assets/img/PA.png" alt="js" width="100em" height="100em">
+                        <span class="material-symbols-outlined">
+                            PA
+                        </span>
+                        <div class="barra">
+                            <div class="progreso" style="--w:40%"></div>
+                        </div>
+                    </div>
+                    <div class="automation hability">
+                        <img src="../assets/img/AA.png" alt="automation" width="100em" height="100em">
+                        <span class="material-symbols-outlined">
+                            AA
+                        </span>
+                        <div class="barra">
+                            <div class="progreso" style="--w:50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <br> 
+        </div>
+    </section>
+    <section id="proyects">
+        <div class="title">
+            <h1>Proyectos</h1>
+            <p>
+                Todos los proyectos son inspirados hacia el beneficio presente y futuro de nuestros clientes, para
+                mejorar la eficiencia y la productividad, proporcionar nuevas formas de comunicación y enriquecer la 
+                experiencia de usuario, proporcionando a la comunidad una variedad de ventajas. Estas incluyen mejoras 
+                en la productividad, facilidad de uso y seguridad.
+
+                Se desarrollaron 2 paginas web para el beneficio local de la comunidad
+                <ul class="services">
+                    <li>Hoteles Tocaima</li>
+                    <p>Una pagina web para dar mayor visualizacion a todos los hoteles de Tocaima y mejorar el servicio al propietario
+                        como a los huespedes o turistas que llegan cada año al municipio, queriendo lograr un gran impacto en la mayoria
+                        de hoteles aumentando su productividad y capacidad de hospedados en cada hotel.
+                    </p>
+                    <img class="card" src="../assets/img/logoAmarilloBlanco.png" alt="Hoteles Tocaima" width="400em" height="200em">
+                    <li>JustDuList</li>
+                    <p>Un sistema de inventario para todo tipo de establecimiento con el fin de erradicar el uso de papel para llevar la contabilidad
+                        de un establecimiento, adicional cuenta con una lista de que haceres para recordar al usuadio las tareas diarias hacer en 
+                        el establecimiento o local. A futuro se implementaria lector de codigo de barras, facturacion electronica e impresion o envio
+                        de factura por correo.
+                    </p>
+                    <img class="card" src="../assets/img/JustDuList.PNG" alt="Hoteles Tocaima" width="400em" height="100em">
+                </ul>
+        </div>
     </section>
 </body>
+<script src="../js/index.js"></script>
 </html>

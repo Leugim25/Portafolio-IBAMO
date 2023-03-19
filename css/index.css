@@ -4,7 +4,8 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
     --azul: #00eeff;
-    --gris: #363537;
+    --gris: #3e3c3f;
+    --grisClaro: #696969;
     --negro: #22211f;
     --blanco: #FFFFFF;
 }
@@ -14,7 +15,9 @@ body{
 }
 
 header{
-    max-height: 5%;
+    position: fixed;
+    width: 100%;
+    max-height: 10%;
     padding: 0.5em;
     background-color: var(--gris);
     font-size: 25px;
@@ -26,13 +29,18 @@ nav{
     align-items: center;
 }
 
+.card{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 5%;
+}
+
 .nav-link{
     position: fixed;
     width: 100%;
-    height: 0;
-    top: 100px;
+    top: 75px;
     background: rgba(26, 24, 24, 0.69);
-    box-shadow: 0 4px 30px rgba(26, 24, 24, 0.69);
     backdrop-filter: blur(3.8px);
     -webkit-backdrop-filter: blur(3.8px);
     text-align: center;
@@ -84,9 +92,8 @@ nav{
 }
 
 .logo img{
-    height: 2em;
-    margin-left: 1.5em;
-    margin-right: 0.5em;
+    height: 3em;
+    margin-left: 4.5em;
 }
 
 .introduction{
@@ -106,7 +113,7 @@ nav{
 
 .introduction .text span{
     position: absolute;
-    margin-left: -320px;
+    margin-left: -260px;
     height: 0;
     border-left: 2px var(--azul) solid;
     animation: saltar 5s infinite;
@@ -134,6 +141,98 @@ nav{
     text-align: center;
 }
 
+.barra {
+    width: 100px;
+    height: 6px;
+    background-color: #ffffff75;
+    margin-bottom: 10%;
+    border-radius: 10px;
+}
+
+.progreso{
+    width: var(--w);
+    height: 6px;
+    background-color: var(--azul);
+    border-radius: 10px;
+    margin-bottom: 10%;
+    animation: porcentaje 5s ease;
+}
+
+.title{
+    color: var(--blanco);
+    margin: auto;
+}
+
+.title h1{
+    padding-top: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.border-buttom-title{
+    width: 33%;
+    height: 2px;
+    background-color: var(--azul);
+    margin: auto;
+}
+
+.title p{
+    font-size: 25px;
+    font-weight: 100;
+    text-align: justify;
+    margin: 1em 3em 3em 3em;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+}
+
+.skills img{
+    transition: all .5s;
+}
+
+.skills img:hover{
+    filter: invert(9%) sepia(16%) saturate(217%) hue-rotate(2deg) brightness(96%) contrast(91%);
+    transition: all .5s;
+}
+
+.skills span{
+    color: var(--blanco);
+    text-align: center;
+    font-size: 50px;
+    display: block;
+}
+
+.skills .uipath span, .skills .java span, .skills .vba span,
+.skills .powerAutomate span, .skills .spring span, .skills .laravel span, .skills .automation span{
+    font-size: 15px;
+    margin: 17.5px;
+}
+
+.section{
+    background-color: var(--gris);
+}
+
+.services li{
+    margin-left: 7%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@keyframes porcentaje {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: var(--w);
+    }
+}
+
 @keyframes saltar {
     0%{
         height: 20px;
@@ -153,9 +252,6 @@ nav{
 }
 
 @media screen and (min-width:900px){
-    .nav-link{
-        font-size: small;
-    }
 
     .menu-check{
         display: none;
@@ -167,6 +263,8 @@ nav{
         text-align: right;
         background-color: var(--gris);
         transition: none;
+        font-size: small;
+        font-weight: 100;
     }
 
     .nav-link li{
@@ -176,5 +274,12 @@ nav{
         font-size: 25px;
         transition: none;
         align-items: center;
+    }
+
+    .introduction .image{
+        padding-top: 3.5em;
+    }
+    .skills html img span{
+        flex-direction: column;
     }
 }
